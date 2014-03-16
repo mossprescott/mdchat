@@ -1,0 +1,8 @@
+#! /bin/bash
+# Run gradlew with an extra parameter to force it to use jdk1.7 on Mac OS X.
+
+jdk7=`/usr/libexec/java_home -v 1.7`
+
+dir=`dirname $0`
+
+$dir/gradlew -Dorg.gradle.java.home=$jdk7 $@
