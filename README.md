@@ -30,6 +30,7 @@ of deploying the JDK, and this alternative wrapper might help:
 ### Exploring the API
 
 All the data can be explored just by starting from the server root: 
+
 `http://localhost:9998/`
 
 This is much more pleasant experience if you have something like the 
@@ -37,13 +38,19 @@ This is much more pleasant experience if you have something like the
 and also formats the JSON nicely for reading.
 
 New topics and users can be added by simply requesting them:
+
 `http://localhost:9998/users/steve` -- creates new user `steve` if necessary
+
 `http://localhost:9998/topics/underwaterBasketWeaving` -- similar
 
 To post, you can make a POST request to the topic:
+
 `http://localhost:9998/topics/pets?user=steve&text=I+like+cats`
+
 or, equivalently, GET to this special URL (just to make in-browser testing easier):
+
 `http://localhost:9998/topics/post?topic=pets&user=steve&text=I+like+cats`
+
 
 The server doesn't do much error handling, and is probably easily confused by 
 things like user/topic names with spaces.
